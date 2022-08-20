@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { ComposantComponent } from './composant/composant.component';
+import { AddProjectComponent } from './add-project/add-project.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -23,12 +25,15 @@ import { ComposantComponent } from './composant/composant.component';
     NavbarModule,
     FooterModule,
     SidebarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     ComposantComponent,
+    AddProjectComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
