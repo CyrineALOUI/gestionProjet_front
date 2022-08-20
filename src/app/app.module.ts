@@ -15,6 +15,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { ComposantComponent } from './composant/composant.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { EditProjectComponent } from './edit-project/edit-project.component';
 
 @NgModule({
   imports: [
@@ -28,12 +30,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     ComposantComponent,
     AddProjectComponent,
+    EditProjectComponent,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

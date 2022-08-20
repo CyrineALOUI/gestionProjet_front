@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-project',
@@ -9,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddProjectComponent implements OnInit {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient , private router : Router , private _location: Location) { }
 
   projectForm : FormGroup;
   URL = "http://localhost:8082/api/projets";
@@ -37,23 +39,19 @@ this.projectForm = new FormGroup({
 
     // call WS
 
-  
-
-
-let dateDebut = this.projectForm.controls['date_debut'].value;
-let dateFin = this.projectForm.controls['date_fin'].value;
-
-    console.log(this.projectForm.controls['date_debut'].value);
+  let dateDebut = this.projectForm.controls['date_debut'].value;
+  let dateFin = this.projectForm.controls['date_fin'].value;
 
     this.projectForm.controls['date_debut'].setValue(dateDebut.replaceAll('-','/'))
     this.projectForm.controls['date_fin'].setValue(dateFin.replaceAll('-','/')) 
 
-    console.log(this.projectForm.value);
     
 
  this.http.post(this.URL,this.projectForm.value).subscribe(res=>{
       console.log(res);
-      
+  
+    this._location.back();     
+
     })
     
 
@@ -65,7 +63,6 @@ let dateFin = this.projectForm.controls['date_fin'].value;
 
       
   }
-  
-  
+
 
 }

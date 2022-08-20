@@ -1,5 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+export interface ProjectData{
+
+  nom:string,
+  entite:string
+  description:string,
+  dateDebut:string,
+  dateFin:string,
+  budget:number
+
+}
+
 
 @Component({
   selector: 'app-projet',
@@ -8,13 +21,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjetComponent implements OnInit {
 
-  projet:any=[];
+  projectList:any;
+  URL = "http://localhost:8082/api/projets";
 
-  constructor() {}
+  constructor(private http : HttpClient , private router : Router) {}
+
 
   ngOnInit(): void {
 
+      this.http.get(this.URL).subscribe(res=>{
+        console.log(res);
+      
+        this.projectList = res;
+      })
     
   }
+
+
+  delete(id){
+
+    this.http.delete(this.URL+"/"+id).subscribe(res=>{
+      console.log(res);
+      location.reload();
+      
+    })
+
+  }
+
+
 
 }
