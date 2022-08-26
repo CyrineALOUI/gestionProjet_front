@@ -8,14 +8,20 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'pe-7s-graph', class: '' },
+        
+    { path: '/projet', title: 'Gestion Projets',  icon:'pe-7s-note2', class: '' },
+    { path: '/competence', title: 'Gestion Compétences',  icon:'pe-7s-diamond', class: '' },
+    { path: '/ressource', title: 'Gestion Ressources',  icon:'pe-7s-users', class: '' },
+    { path: '/phase', title: 'Gestion Phases',  icon:'pe-7s-graph1', class: '' },
+    { path: '/role', title: 'Gestion Profils',  icon:'pe-7s-config', class: '' },
+
+
+    // { path: '/dashboard', title: 'Dashboard',  icon: 'pe-7s-graph', class: '' },
     { path: '/user', title: 'User Profile',  icon:'pe-7s-user', class: '' },
-    { path: '/table', title: 'Table List',  icon:'pe-7s-note2', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'pe-7s-news-paper', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'pe-7s-science', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'pe-7s-map-marker', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },
-    { path: '/projet', title: 'Table Projet',  icon:'pe-7s-note2', class: '' },
+    { path: '/icons', title: 'Icons',  icon:'pe-7s-science', class: '' }
+
+    
+   
 
 
 ];

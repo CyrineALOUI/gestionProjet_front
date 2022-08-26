@@ -10,8 +10,14 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { ProjetComponent } from 'app/projet/projet.component';
 import { AddProjectComponent } from 'app/add-project/add-project.component';
 import { EditProjectComponent } from 'app/edit-project/edit-project.component';
-
-
+import { CompetenceComponent } from 'app/competence/competence.component';
+import { AddCompetenceComponent } from 'app/add-competence/add-competence.component';
+import { EditCompetenceComponent } from 'app/edit-competence/edit-competence.component';
+import { PhaseComponent } from 'app/phase/phase.component';
+import { AddPhaseComponent } from 'app/add-phase/add-phase.component';
+import { EditPhaseComponent } from 'app/edit-phase/edit-phase.component';
+import { RessourceComponent } from 'app/ressource/ressource.component';
+import { RoleComponent } from 'app/role/role.component';
 
 export const AdminLayoutRoutes: Routes = [
 
@@ -24,8 +30,16 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'projet',         component: ProjetComponent },
-    {path:'addProject' ,      component:AddProjectComponent},
-    {path:'editProject/:id',      component:EditProjectComponent }
+    { path:'addProject' ,      component:AddProjectComponent},
+    { path:'editProject/:id',      component:EditProjectComponent },
+    { path: 'competence',         component: CompetenceComponent },
+    { path:'addCompetence' ,      component:AddCompetenceComponent},
+    { path:'editCompetence/:id',      component:EditCompetenceComponent },
+    { path: 'phase',         component: PhaseComponent },
+    { path:'addPhase' ,      component:AddPhaseComponent},
+    { path:'editPhase/:id',      component:EditPhaseComponent },
+    { path:'ressource',      component:RessourceComponent },
+    { path:'role',      component:RoleComponent }
 
     
    

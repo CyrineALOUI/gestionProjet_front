@@ -17,6 +17,18 @@ import { AddProjectComponent } from './add-project/add-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { CompetenceComponent } from './competence/competence.component';
+import { AddCompetenceComponent } from './add-competence/add-competence.component';
+import { EditCompetenceComponent } from './edit-competence/edit-competence.component';
+import { PhaseComponent } from './phase/phase.component';
+import { AddPhaseComponent } from './add-phase/add-phase.component';
+import { EditPhaseComponent } from './edit-phase/edit-phase.component';
+import { RegisterComponent } from './register/register.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RessourceComponent } from './ressource/ressource.component';
+import { RoleComponent } from './role/role.component';
 
 @NgModule({
   imports: [
@@ -30,6 +42,9 @@ import { EditProjectComponent } from './edit-project/edit-project.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSnackBarModule
     
   ],
   declarations: [
@@ -38,6 +53,15 @@ import { EditProjectComponent } from './edit-project/edit-project.component';
     ComposantComponent,
     AddProjectComponent,
     EditProjectComponent,
+    CompetenceComponent,
+    AddCompetenceComponent,
+    EditCompetenceComponent,
+    PhaseComponent,
+    AddPhaseComponent,
+    EditPhaseComponent,
+    RegisterComponent,
+    RessourceComponent,
+    RoleComponent,
     
   ],
   providers: [],

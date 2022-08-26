@@ -21,6 +21,7 @@ import { ProjetComponent } from 'app/projet/projet.component';
 
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -38,7 +39,8 @@ import { ProjetComponent } from 'app/projet/projet.component';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    ProjetComponent
+    ProjetComponent,
+    
 
   ]
 })
