@@ -28,7 +28,7 @@ export class ProjetComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    
       this.http.get(this.URL).subscribe(res=>{
         console.log(res);
       

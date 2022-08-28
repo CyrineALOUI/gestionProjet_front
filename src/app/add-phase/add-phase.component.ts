@@ -27,7 +27,7 @@ this.phaseForm = new FormGroup({
   date_debut_phase:new FormControl,
   date_fin_phase:new FormControl,
   etat:new FormControl,
-  id_projet: new FormControl
+  projet: new FormControl
 
 })
 
@@ -43,6 +43,9 @@ this.List = res;
 
   submit(){
 
+    console.log(this.phaseForm.value);
+    
+
   if(this.phaseForm.valid){ 
 
     // call WS
@@ -53,9 +56,14 @@ this.List = res;
     this.phaseForm.controls['date_debut_phase'].setValue(dateDebutPhase.replaceAll('-','/'))
     this.phaseForm.controls['date_fin_phase'].setValue(dateFinPhase.replaceAll('-','/')) 
 
+console.log(this.List);
+
+
     for (let i=0;i<this.List.length;i++){
-      if(this.List[i].id==this.phaseForm.controls['id_projet'].value) {
-        this.phaseForm.controls['id_projet'].setValue(this.List[i]); 
+      console.log(this.List[i]);
+      
+      if(this.List[i].id==this.phaseForm.controls['projet'].value) {
+        this.phaseForm.controls['projet'].setValue(this.List[i]); 
       }
     }
      console.log(this.phaseForm.value);

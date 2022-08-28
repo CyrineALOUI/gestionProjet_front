@@ -42,7 +42,7 @@
                                         <td>{{phase.date_debut_phase}}</td>
                                         <td>{{phase.date_fin_phase}} </td>
                                         <td>{{phase.etat}}</td>
-                                        <td>{{phase.id_projet}}</td>
+                                        <td>{{phase.projet['id']}}</td>
 
                                         <a href="/#/editPhase/{{phase.id}}"><button class="btn btn-warning btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Editer"><i class="fa fa-edit"></i></button></a>
                                         <button (click)="delete(phase.id)" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Supprimer"><i class="fa fa-trash"></i></button>

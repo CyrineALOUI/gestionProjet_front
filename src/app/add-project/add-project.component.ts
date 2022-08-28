@@ -15,6 +15,7 @@ export class AddProjectComponent implements OnInit {
 
   projectForm : FormGroup;
   URL = "http://localhost:8082/api/projets";
+  URLCompetence = "http://localhost:8082/api/competences";
 
 
   ngOnInit(): void {
@@ -37,14 +38,21 @@ this.projectForm = new FormGroup({
 
   if(this.projectForm.valid){ 
 
-    // call WS
-
   let dateDebut = this.projectForm.controls['date_debut'].value;
   let dateFin = this.projectForm.controls['date_fin'].value;
 
     this.projectForm.controls['date_debut'].setValue(dateDebut.replaceAll('-','/'))
     this.projectForm.controls['date_fin'].setValue(dateFin.replaceAll('-','/')) 
 
+// call WS to fetch list of competences
+
+this.http.get(this.URLCompetence).subscribe(res=>{
+
+  console.log(res);
+  
+  // TODO
+
+})
     
 
  this.http.post(this.URL,this.projectForm.value).subscribe(res=>{
